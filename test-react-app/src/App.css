@@ -1,0 +1,13 @@
+a {
+  color: rgb(138, 136, 136) !important;
+  transition: .2s all;
+  text-decoration: none !important;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  color: rgb(255, 255, 255) !important;
+}
+h2{
+  text-align: center !important;
+}
