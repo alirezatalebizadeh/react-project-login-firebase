@@ -1,0 +1,11 @@
+::placeholder {
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+form {
+    max-width: 500px !important;
+}
