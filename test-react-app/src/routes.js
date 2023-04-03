@@ -4,6 +4,8 @@ import NotFound from './Components/NotFound'
 import Home from './Components/Home'
 import Contact from './Components/Contact'
 import User from './Components/User'
+import Panel from './Components/Panel'
+import Lagin from './Components/Lagin'
 
 
 
@@ -11,8 +13,10 @@ let routes = [
     { path: '/', element: < Home /> },
     { path: '/product', element: <Product /> },
     { path: '/product/:productId', element: <MainProduct /> },
+    { path: '/panel', element: <Panel /> },
+    { path: '/login', element: <Lagin /> },
     { path: '/user', element: <User /> },
-    // { path: '*', element: <NotFound /> },
+    { path: '*', element: <NotFound /> },
     {
         path: '/contact', element: <Contact />, children: [
             { path: 'setting', element: < h2 > این زیر مجموعه این صفحه است.تنظیمات سایت...</h2 > },

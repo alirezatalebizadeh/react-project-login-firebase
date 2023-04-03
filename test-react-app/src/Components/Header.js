@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Container, Nav, NavDropdown, Form, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import './header.css'
 
 export default function Header() {
     return (
@@ -15,21 +16,17 @@ export default function Header() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link>
-                            <Link to="/">Home</Link>
-                        </Nav.Link>
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/">Home</NavLink></Nav.Link>
 
-                        <Nav.Link>
-                            <Link to="/contact">contact</Link>
-                        </Nav.Link>
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/panel">Panel</NavLink></Nav.Link>
 
-                        <Nav.Link>
-                            <Link to="/product">product</Link>
-                        </Nav.Link>
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/login">login</NavLink></Nav.Link>
 
-                        <Nav.Link>
-                            <Link to="/user">user</Link>
-                        </Nav.Link>
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/contact">contact</NavLink></Nav.Link>
+
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/product">product</NavLink></Nav.Link >
+
+                        <Nav.Link><NavLink className={(link) => link.isActive ? 'active' : ''} to="/user">user</NavLink></Nav.Link >
 
                         <NavDropdown title="news" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -37,7 +34,7 @@ export default function Header() {
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
                         </NavDropdown>
-                    </Nav>
+                    </Nav >
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
@@ -47,9 +44,9 @@ export default function Header() {
                         />
                         <Button variant="outline-success">Search</Button>
                     </Form>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                </Navbar.Collapse >
+            </Container >
+        </Navbar >
 
     )
 }
